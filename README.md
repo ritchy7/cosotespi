@@ -1,6 +1,6 @@
-# Utilisez les données publiques de l'OpenFoodFacts
+# Concevez la solution technique d’un système de gestion de pizzeria
 
-It's a school project named "Use the public data of the OpenFoodFacts".
+It's a school project named "Design the technical solution for a pizzeria management system".
 
 Requirements :
 - PostgreSQL 10
