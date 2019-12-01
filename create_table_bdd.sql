@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS customer (
 CREATE TABLE IF NOT EXISTS command (
     id              UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     command_date    timestamp NOT NULL DEFAULT CURRENT_DATE,
-    status          JSONB NOT NULL,
+    status          VARCHAR(200) NOT NULL,
     position        JSONB NOT NULL,
     customer_id     INTEGER NOT NULL,
     address_id      INTEGER NOT NULL,
@@ -137,8 +137,8 @@ CREATE TABLE IF NOT EXISTS ingredient (
 );
 
 
-/* Ingredient_list */
-CREATE TABLE IF NOT EXISTS ingredient_list (
+/* Recipe_ingredient */
+CREATE TABLE IF NOT EXISTS recipe_ingredient (
     recipe_id       INTEGER REFERENCES recipe(id) ON UPDATE CASCADE ON DELETE CASCADE,
     ingredient_id   INTEGER REFERENCES ingredient(id) ON UPDATE CASCADE ON DELETE CASCADE,
 
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS ingredient_list (
 
 /* Restaurant_ingredient */
 CREATE TABLE IF NOT EXISTS restaurant_ingredient (
-    restaurant_id       INTEGER REFERENCES restaurant(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    restaurant_id   INTEGER REFERENCES restaurant(id) ON UPDATE CASCADE ON DELETE CASCADE,
     ingredient_id   INTEGER REFERENCES ingredient(id) ON UPDATE CASCADE ON DELETE CASCADE,
 
     CONSTRAINT restaurant_ingredient_pkey PRIMARY KEY (restaurant_id, ingredient_id)
