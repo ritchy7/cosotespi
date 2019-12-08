@@ -33,15 +33,12 @@ TRUNCATE TABLE users_groups RESTART IDENTITY CASCADE;
 INSERT INTO users_groups (users_id, groups_id) VALUES (10, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (8, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (8, 3);
-INSERT INTO users_groups (users_id, groups_id) VALUES (4, 3);
 INSERT INTO users_groups (users_id, groups_id) VALUES (6, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (10, 1);
 INSERT INTO users_groups (users_id, groups_id) VALUES (3, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (5, 2);
-INSERT INTO users_groups (users_id, groups_id) VALUES (4, 4);
 INSERT INTO users_groups (users_id, groups_id) VALUES (9, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (1, 2);
-INSERT INTO users_groups (users_id, groups_id) VALUES (4, 2);
 INSERT INTO users_groups (users_id, groups_id) VALUES (7, 3);
 INSERT INTO users_groups (users_id, groups_id) VALUES (1, 3);
 INSERT INTO users_groups (users_id, groups_id) VALUES (3, 1);
@@ -213,7 +210,6 @@ INSERT INTO command_recipe (command_id, recipe_id) VALUES ('3ff2697e-c8ba-44c0-9
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('342028cd-5b3b-4f3d-8a38-d0a4fa2d9b47', 5);
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('0cec8494-774f-4bf6-9cba-994f2d65c54d', 2);
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('55f93bfa-a335-475e-80e5-81540bbb9b6b', 8);
-INSERT INTO command_recipe (command_id, recipe_id) VALUES ('55f93bfa-a335-475e-80e5-81540bbb9b6b', 3);
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('dc21de26-f6a4-4b02-92bc-50b7940c12b1', 6);
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('3ff2697e-c8ba-44c0-9340-78846f2cd31b', 8);
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('fce6ef84-9f5a-4a67-80ff-2d8c29eb8a95', 10);
@@ -241,7 +237,7 @@ INSERT INTO ingredient (id, name, description) VALUES (1, 'MISSHA M SIGNATURE RE
 INSERT INTO ingredient (id, name, description) VALUES (2, 'Leader', 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae');
 INSERT INTO ingredient (id, name, description) VALUES (3, 'Cefuroxime', 'nulla justo aliquam quis turpis');
 INSERT INTO ingredient (id, name, description) VALUES (4, 'Antibacterial Hand Sanitizer', 'magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque');
-INSERT INTO ingredient (id, name, description) VALUES (5, 'Phenobarbital', 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
+INSERT INTO ingredient (id, name, description) VALUES (5, 'Phenobarbital', 37, 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
 
 
 /* Insert recipe_ingredient. */
