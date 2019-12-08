@@ -235,14 +235,13 @@ INSERT INTO command_recipe (command_id, recipe_id) VALUES ('ce091b1c-ff8b-465a-9
 INSERT INTO command_recipe (command_id, recipe_id) VALUES ('dc21de26-f6a4-4b02-92bc-50b7940c12b1', 10);
 
 
-
 /* Insert ingredient. */
 TRUNCATE TABLE ingredient RESTART IDENTITY CASCADE;
-INSERT INTO ingredient (id, name, stock, description) VALUES (1, 'MISSHA M SIGNATURE REAL COMPLETE BB', 935, 'eleifend quam a odio in hac habitasse');
-INSERT INTO ingredient (id, name, stock, description) VALUES (2, 'Leader', 746, 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae');
-INSERT INTO ingredient (id, name, stock, description) VALUES (3, 'Cefuroxime', 61, 'nulla justo aliquam quis turpis');
-INSERT INTO ingredient (id, name, stock, description) VALUES (4, 'Antibacterial Hand Sanitizer', 370, 'magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque');
-INSERT INTO ingredient (id, name, stock, description) VALUES (5, 'Phenobarbital', 37, 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
+INSERT INTO ingredient (id, name, description) VALUES (1, 'MISSHA M SIGNATURE REAL COMPLETE BB', 'eleifend quam a odio in hac habitasse');
+INSERT INTO ingredient (id, name, description) VALUES (2, 'Leader', 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae');
+INSERT INTO ingredient (id, name, description) VALUES (3, 'Cefuroxime', 'nulla justo aliquam quis turpis');
+INSERT INTO ingredient (id, name, description) VALUES (4, 'Antibacterial Hand Sanitizer', 'magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque');
+INSERT INTO ingredient (id, name, description) VALUES (5, 'Phenobarbital', 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
 
 
 /* Insert recipe_ingredient. */
@@ -266,17 +265,17 @@ INSERT INTO recipe_ingredient (recipe_id, ingredient_id) VALUES (6, 2);
 
 /* Insert restaurant_ingredient. */
 TRUNCATE TABLE restaurant_ingredient RESTART IDENTITY CASCADE;
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (2, 2);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (3, 2);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (5, 4);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (5, 1);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (4, 2);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (4, 1);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (4, 3);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (5, 5);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (5, 2);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (3, 5);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (3, 1);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (4, 5);
-INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id) VALUES (4, 4);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (2, 2, 30);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (3, 2, 234);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (5, 4, 54);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (5, 1, 60);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (4, 2, 3);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (4, 1, 10);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (4, 3, 33);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (5, 5, 435);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (5, 2, 870);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (3, 5, 99);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (3, 1, 6);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (4, 5, 46);
+INSERT INTO restaurant_ingredient (restaurant_id, ingredient_id, stock) VALUES (4, 4, 19);
 

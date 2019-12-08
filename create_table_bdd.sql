@@ -132,7 +132,6 @@ CREATE TABLE IF NOT EXISTS command_recipe (
 CREATE TABLE IF NOT EXISTS ingredient (
     id          SERIAL PRIMARY KEY,
     name        VARCHAR(200) NOT NULL,
-    stock       INTEGER NOT NULL,
     description TEXT
 );
 
@@ -150,6 +149,7 @@ CREATE TABLE IF NOT EXISTS recipe_ingredient (
 CREATE TABLE IF NOT EXISTS restaurant_ingredient (
     restaurant_id   INTEGER REFERENCES restaurant(id) ON UPDATE CASCADE ON DELETE CASCADE,
     ingredient_id   INTEGER REFERENCES ingredient(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    stock           INTEGER NOT NULL,
 
     CONSTRAINT restaurant_ingredient_pkey PRIMARY KEY (restaurant_id, ingredient_id)
 );
