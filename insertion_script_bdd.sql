@@ -237,7 +237,7 @@ INSERT INTO ingredient (id, name, description) VALUES (1, 'MISSHA M SIGNATURE RE
 INSERT INTO ingredient (id, name, description) VALUES (2, 'Leader', 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae');
 INSERT INTO ingredient (id, name, description) VALUES (3, 'Cefuroxime', 'nulla justo aliquam quis turpis');
 INSERT INTO ingredient (id, name, description) VALUES (4, 'Antibacterial Hand Sanitizer', 'magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque');
-INSERT INTO ingredient (id, name, description) VALUES (5, 'Phenobarbital', 37, 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
+INSERT INTO ingredient (id, name, description) VALUES (5, 'Phenobarbital', 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl');
 
 
 /* Insert recipe_ingredient. */
