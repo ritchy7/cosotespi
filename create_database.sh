@@ -1,43 +1,46 @@
 #!/bin/bash
-
 # Create user.
 echo "################################################################"
 echo "######################## Create user ###########################"
 echo "################################################################"
-sudo -u postgres psql -c "CREATE ROLE vagrant LOGIN PASSWORD '1234';"
+psql postgres -c "CREATE ROLE pengine LOGIN PASSWORD '1234';"
 
+
+# Grant the user to SuperUser to install UUID module.
 echo "################################################################"
 echo "################## Grant user to superuser #####################"
 echo "################################################################"
-# Grant the user to SuperUser to install UUID module.
-sudo -u postgres psql -c "ALTER USER vagrant WITH SUPERUSER;"
+psql postgres -c "ALTER USER pengine WITH SUPERUSER;"
 
 
+# Create database.
 echo "################################################################"
 echo "###################### Create database #########################"
 echo "################################################################"
-# Create database.
-sudo -u postgres psql -c "
+psql postgres -c "
     CREATE DATABASE
         restaurant
     WITH ENCODING='UTF8'
-    OWNER=vagrant;
+    OWNER=pengine;
 "
 
+
+# Create tables.
 echo "################################################################"
 echo "####################### Create tables ##########################"
 echo "################################################################"
-# Create tables.
-PGPASSWORD=1234 psql -U vagrant restaurant < create_table_bdd.sql
+PGPASSWORD=1234 psql -U pengine restaurant < create_table_bdd.sql
 
+
+# Remove the superuser mode.
 echo "################################################################"
 echo "################## Remove to user superuser ####################"
 echo "################################################################"
-# Remove the superuser mode.
-sudo -u postgres psql -c "ALTER USER vagrant WITH NOSUPERUSER;"
+psql postgres -c "ALTER USER pengine WITH NOSUPERUSER;"
 
+
+# Insert the data.
 echo "################################################################"
-echo "################### Connecting to database #####################"
+echo "##################### Insert the data ##########################"
 echo "################################################################"
-# Connect to the database.
-PGPASSWORD=1234 psql -U vagrant restaurant
+PGPASSWORD=1234 psql -U pengine restaurant < insertion_script_bdd.sql
